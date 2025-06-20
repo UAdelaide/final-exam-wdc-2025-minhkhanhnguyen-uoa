@@ -61,6 +61,8 @@ async function init_db() {
             `);
         }
 
+        // for WalkApplication
+
         return db;
 
     } catch (err) {
