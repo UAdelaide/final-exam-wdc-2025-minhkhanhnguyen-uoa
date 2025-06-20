@@ -5,11 +5,12 @@ const mysql = require('mysql2/promise');
 let db = null;
 
 async function init_db() {
-    // Check for db is 
+    // Check for db if it is already connected
     if (db) {
         return db;
     }
 
+    // Connect db
     try {
         // Connect to db
         db = await mysql.createConnection({
