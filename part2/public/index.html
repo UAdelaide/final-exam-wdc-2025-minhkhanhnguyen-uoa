@@ -71,7 +71,9 @@
 
             // Fetch an img for each dog
             for (let dog of all_dogs) {
-              try
+              try {
+                const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
+              }
             }
 
           }
