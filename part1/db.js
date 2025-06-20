@@ -64,7 +64,16 @@ async function init_db() {
         // for WalkApplications table (hard-coded)
         const [walk_application_rows] = await db.execute(`SELECT COUNT(*) AS wlkapp_count FROM WalkApplications`);
         if (walk_application_rows[0].wlkapp_count === 0) {
-            
+            await db.execute(`
+                INSERT INTO WalkApplications (request_id, walker_id, status) VALUES
+                (2, 4, 'accepted'),
+                (1, 2, 'pending'),
+                (4, 4, 'rejected'),
+                (4, 2, 'accepted'),
+                (3, 5, 'pending'),
+    -> (3, 2, 'pending'),
+    -> (5, 5, 'accepted');
+            `);
         }
 
         return db;
