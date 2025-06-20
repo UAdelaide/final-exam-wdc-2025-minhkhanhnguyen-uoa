@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const db = require('../models/db');
+const { signedCookie } = require('cookie-parser');
 
 // GET all users (for admin/testing)
 router.get('/', async (req, res) => {
@@ -73,7 +74,8 @@ router.post('/logout', async (req, res) => {
       return res.status(500).json({ error: 'Failed to log out' });
     }
 
-    // 
+    // Clear session
+    res.clearCookie(signedCookie.)
   });
 });
 
