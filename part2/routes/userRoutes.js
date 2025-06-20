@@ -100,6 +100,8 @@ router.get('/dogs', async (req, res) => {
   }
 });
 
+// Load Walk
+
 // GET all the dogs
 router.get('/allDogs', async (req, res) => {
   try {
