@@ -24,7 +24,7 @@ router.get('/walkrequests/open', async (req, res) => {
         `);
         res.json(open_wlkreq);
     } catch (err) {
-        console.log('Error: ')
+        console.log('Error in api/walkrequests/open: ', err);
         res.status(500).json({ error: 'Failed to fetch open walk requests' });
     }
 });
