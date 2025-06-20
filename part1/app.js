@@ -58,7 +58,7 @@ let db;
 
         // for WalkRequests table
         const [walk_request_rows] = await db.execute(`SELECT COUNT(*) AS wlkreq_count FROM WalkRequests`);
-        if ()
+        if (walk_request_rows[0].wlkreq === 0_ )
 
 
 
