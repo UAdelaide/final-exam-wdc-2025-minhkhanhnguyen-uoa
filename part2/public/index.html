@@ -15,17 +15,16 @@
 
     <div id="login">
       <form @submit.prevent="login">
-      <label for="username">Username</label>
-      <input v-model="username" type="text" id="username" required>
+        <div
+        <label for="username">Username</label>
+        <input v-model="username" type="text" id="username" required>
 
-      <label for="password">Password</label>
-      <input v-model="password" type="password" id="password" required>
+        <label for="password">Password</label>
+        <input v-model="password" type="password" id="password" required>
 
-      <button type="submit">Log In</button>
-    </form>
+        <button type="submit">Log In</button>
+      </form>
     </div>
-
-
   </div>
 
   <script>
