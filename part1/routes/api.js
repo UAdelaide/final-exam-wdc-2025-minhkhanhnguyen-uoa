@@ -42,7 +42,8 @@ router.get('/walkers/summary', async (req, res) => {
             JOIN Users ON rate.walker_id = u.user_id
             JOIN WalkApplications AS app ON app.walker_id = rate.walker_id
             JOIN WalkRequests AS req ON req.request_id = app.request_id
-            WHERE 
+            WHERE u.role = 'walker'
+            
         `);
     } catch (err) {
         console.log('Error in api/walkers/summary: ', err);
