@@ -59,6 +59,7 @@
             }
 
             user.value = await res.json();
+            console.log('u')
           } catch (err) {
             error.value = err.message;
           }
