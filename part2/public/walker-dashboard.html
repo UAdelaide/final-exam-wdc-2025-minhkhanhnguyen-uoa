@@ -51,7 +51,7 @@
         async function getCurrentUser() {
           try {
             const res = await fetch('/api/users/me', {
-              
+              credentials: 'include'
             });
 
             if (!res.ok) {
@@ -59,6 +59,8 @@
             }
 
             user.value = await res.json();
+          } catch (err) {
+            
           }
         }
 
