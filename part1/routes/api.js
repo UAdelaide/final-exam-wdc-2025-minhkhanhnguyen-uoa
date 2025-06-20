@@ -38,7 +38,7 @@ router.get('/walkers/summary', async (req, res) => {
         `);
     } catch (err) {
         console.log('Error in api/walkers/summary: ', err);
-        res.status
+        res.status(500).json({ error: 'Failed to fetch summary of '})
     }
 });
 
