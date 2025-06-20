@@ -102,8 +102,13 @@ router.get('/dogs', async (req, res) => {
 
 // Load walk request from the logged in owners
 router.get('/walkrequests', async (req, res) => {
+  // Check for valid user session
+  if (!req.session.user) {
+    return res.status(401).json({ error: "Not logged in" });
+  }
+
   try {
-    
+    const on
   }
 });
 
