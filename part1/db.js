@@ -80,7 +80,9 @@ async function init_db() {
         const [walk_rating_rows] = await db.execute(`SELECT COUNT(*) AS wlkrate_count FROM WalkRatings`);
         if (walk_rating_rows[0].wlkrate_count === 0) {
             await db.execute(`
-                
+                INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments) VALUES
+                (3, 5, 1, 5, 'friendly'),
+                (6, 5, 3, 4, 'good');
             `);
         }
 
