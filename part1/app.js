@@ -20,8 +20,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 let db;
 
 (async () => {
+    try {
 
-})
+    } catch {
+        
+    }
+});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
