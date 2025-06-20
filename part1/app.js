@@ -33,7 +33,9 @@ let db;
         // for Users table
         const [user_rows] = await db.execute(`SELECT COUNT(*) AS user_count FROM Users`);
         if (user_rows[0].user_count === 0) {
-            
+            await db.execute(`
+                
+            `);
         }
 
 
