@@ -101,7 +101,7 @@ router.get('/dogs', async (req, res) => {
 });
 
 // GET all the dogs
-router.get('/dogs', async (req, res) => {
+router.get('/allDogs', async (req, res) => {
   try {
     const [rows] = await db.query(`
       SELECT * FROM Dogs;
