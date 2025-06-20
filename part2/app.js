@@ -14,7 +14,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(session({
     secret: 'wdc_secret',
     resave: false,
-    
+    saveUninitialized: false,
+    cookie: {
+        secure: false
+    }
 }));
 
 // Routes
