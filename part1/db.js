@@ -62,7 +62,7 @@ async function init_db() {
         }
 
         // for WalkApplications table (hard-coded)
-        const []
+        const [walk_application_rows] = await db.execute(`SELECT COUNT(*) AS wlk_app`)
 
         return db;
 
