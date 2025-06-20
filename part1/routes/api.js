@@ -33,7 +33,11 @@ router.get('/walkrequests/open', async (req, res) => {
 router.get('/walkers/summary', async (req, res) => {
     try {
         const db = await init_db();
-        const [walkers] = await db.execute
+        const [walkers] = await db.execute(`
+
+        `);
+    } catch (err) {
+        
     }
 });
 
