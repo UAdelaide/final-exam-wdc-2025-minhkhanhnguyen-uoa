@@ -2,7 +2,7 @@ var mysql = require('mysql2/promise');
 
 // Connect to database
 // Insert records if not exists (for testing)
-let db;
+let db = null;
 
 (async () => {
     try {
