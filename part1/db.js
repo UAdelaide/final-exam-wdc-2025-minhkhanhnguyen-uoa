@@ -59,6 +59,9 @@ async function init_db() {
                 ((SELECT dog_id FROM Dogs WHERE name = 'Riley' AND owner_id = (SELECT user_id FROM Users WHERE username = 'alice123')), '2024-06-13 10:13:00', 50, 'Melbourne airport', 'cancelled');
             `);
         }
+
+        return db;
+
     } catch (err) {
         console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
     }
