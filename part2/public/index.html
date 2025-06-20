@@ -65,11 +65,9 @@
                 return alert('User role is not defined');
               }
             } else {
-              const error = await res.json();
               return alert('Login failed');
             }
-
-          }
+          } 
         }
       }
     }).mount('#app');
