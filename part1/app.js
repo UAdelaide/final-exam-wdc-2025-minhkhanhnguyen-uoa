@@ -16,6 +16,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Connect to database
+// Insert records if not exists
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
