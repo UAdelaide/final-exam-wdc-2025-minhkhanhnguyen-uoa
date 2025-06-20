@@ -96,7 +96,7 @@ router.get('/dogs', async (req, res) => {
 
     return res.json(rows);
   } catch (err) {
-    
+    return res.status(500).json({ })
   }
 
 });
