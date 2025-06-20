@@ -21,7 +21,8 @@ let db;
 
 (async () => {
     try {
-
+        // Connect to db
+        db = 
     } catch (err) {
         console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
     }
