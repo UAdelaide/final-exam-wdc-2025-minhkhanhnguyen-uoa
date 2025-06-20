@@ -65,6 +65,7 @@
 
         async function loadDog() {
           try {
+            // Get all dogs from db
             const res = await fetch('/api/users/allDogs');
             const all_dogs = await res.json();
 
