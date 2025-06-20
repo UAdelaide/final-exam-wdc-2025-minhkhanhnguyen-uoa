@@ -57,7 +57,7 @@ let db;
         }
 
         // for WalkRequests table
-        const [walk]
+        const [walk_request_rows] = await db.execute(`SELECT COUNT(*) AS wq`)
 
 
 
