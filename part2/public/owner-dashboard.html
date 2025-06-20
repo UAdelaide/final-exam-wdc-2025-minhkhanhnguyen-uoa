@@ -63,7 +63,7 @@
     </div>
     <p v-else>No walk requests yet.</p>
 
-    <button type="button" class="btn w10" @click="logout">Log out</button>
+    <button type="button" class="btn w10" id="" @click="logout">Log out</button>
   </div>
 
   <script>
@@ -130,7 +130,7 @@
         };
       },
       methods: {
-        // Log out button 
+        // Log out button
         async logout() {
           try {
             const res = await fetch('/api/users/logout', {
