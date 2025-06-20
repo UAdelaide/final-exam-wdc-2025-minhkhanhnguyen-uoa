@@ -31,8 +31,11 @@ router.get('/walkrequests/open', async (req, res) => {
 });
 
 router.get('/walkers/summary', async (req, res) => {
-    
-})
+    try {
+        const db = await init_db();
+        const
+    }
+});
 
 module.exports = router;
 
