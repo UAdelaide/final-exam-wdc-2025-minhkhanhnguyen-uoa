@@ -45,7 +45,7 @@
         const walks = ref([]);
         const message = ref('');
         const error = ref('');
-        let user = '';
+        let user = ref([]);
 
         // Get current user
         async function getCurrentUser() {
@@ -56,7 +56,7 @@
               throw new Error('Failed to get current user');
             }
 
-            
+
           }
         }
 
@@ -96,6 +96,7 @@
 
         return {
           walks,
+          user,
           message,
           error,
           applyToWalk
