@@ -43,6 +43,9 @@ let db;
             `);
         }
 
+        // for Dogs table
+        
+
 
 
     } catch (err) {
