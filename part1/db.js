@@ -64,7 +64,8 @@ async function init_db() {
 
     } catch (err) {
         console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
+        throw err;
     }
 }
 
-module.exports = db;
+module.exports = init_db;
