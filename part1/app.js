@@ -24,8 +24,7 @@ let db;
         // Connect to mysql
         const connection = await mysql.createConnection({
               host: 'localhost',
-              user: 'root',
-              password: ''
+              user: 'root'
         });
 
         // Create the database if it doesn't exist
@@ -36,8 +35,7 @@ let db;
         db = await mysql.createConnection({
             host: 'localhost',
             user: 'root',
-            password: '',
-            database: 'testdb'
+            database: 'DogWalkService'
         });
 
     } catch (err) {
