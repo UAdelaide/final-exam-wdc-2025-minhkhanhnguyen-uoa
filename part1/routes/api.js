@@ -30,7 +30,7 @@ router.get('/walkrequests/open', async (req, res) => {
     }
 });
 
-router.
+router.get('/')
 
 module.exports = router;
 
