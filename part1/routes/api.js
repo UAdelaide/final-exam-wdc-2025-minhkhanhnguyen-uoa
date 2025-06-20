@@ -37,7 +37,9 @@ router.get('/walkers/summary', async (req, res) => {
             SELECT u.username AS walker_username,
             COUNT(rate.rating_id) AS total_ratings,
             AVG(rate.ratings) AS average_rating,
-            COUNT(req.request_if)
+            COUNT(req.request_id) AS completed_walks
+            FROM WalkRatings AS rate
+            JOIN 
         `);
     } catch (err) {
         console.log('Error in api/walkers/summary: ', err);
