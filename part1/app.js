@@ -24,14 +24,9 @@ let db;
         // Connect to mysql
         db = await mysql.createConnection({
               host: 'localhost',
-              user: 'root'
-        });
-
-        // Now connect to the created database
-        db = await mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            database: 'DogWalkService'
+              user: 'root',
+              password: '',
+              database: 'DogWalkService'
         });
 
         // Create tables if not exist
