@@ -87,7 +87,8 @@ router.get('/dogs', async (req, res) => {
     return res.status(401).json({ error: "Not logged in" });
   }
 
-  // Query do
+  // Query dog name from db
+  const owner_id = req.session.user.
 });
 
 module.exports = router;
