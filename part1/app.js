@@ -22,7 +22,11 @@ let db;
 (async () => {
     try {
         // Connect to db
-        db = 
+        const connection = await mysql.createConnection({
+              host: 'localhost',
+              user: 'root',
+              
+            });
     } catch (err) {
         console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
     }
