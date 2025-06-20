@@ -40,7 +40,7 @@ router.get('/walkers/summary', async (req, res) => {
             COUNT(req.request_id) AS completed_walks
             FROM WalkRatings AS rate
             JOIN Users ON rate.walker_id = u.user_id
-            JOIN WalkRequests AS req ON 
+            JOIN WalkApplications AS app
         `);
     } catch (err) {
         console.log('Error in api/walkers/summary: ', err);
