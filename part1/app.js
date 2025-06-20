@@ -22,7 +22,7 @@ let db;
 (async () => {
     try {
         // Connect to mysql
-        const connection = await mysql.createConnection({
+        db = await mysql.createConnection({
               host: 'localhost',
               user: 'root'
         });
