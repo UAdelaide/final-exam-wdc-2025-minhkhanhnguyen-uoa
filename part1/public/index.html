@@ -37,7 +37,8 @@
                 async showPicture() {
                     try {
                         const res = await fetch('https://dog.ceo/api/breeds/image/random');
-                        this.dogImg = await res.json();
+                        const data = await res.json();
+                        this.dogImg = 
                     } catch (err) {
                         console.log('Failed to fetch dog img', err);
                     }
