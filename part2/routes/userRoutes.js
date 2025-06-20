@@ -75,7 +75,8 @@ router.post('/logout', async (req, res) => {
     }
 
     // Clear session
-    res.clearCookie('connect.sid')
+    res.clearCookie('connect.sid');
+    
   });
 });
 
