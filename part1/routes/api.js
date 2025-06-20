@@ -17,9 +17,9 @@ router.get('/walkrequests/open', async (req, res) => {
     try {
         const db = await init_db();
         const [open_wlkreq] = db.execute(`
-
+            SELECT 
         `);
-        res.json(open)
+        res.json(open_wlkreq);
     } catch (err) {
         res.status(500).json({ error: 'Failed to fetch open walk requests' });
     }
