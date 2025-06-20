@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/dogs', (req, res) => ())
+router.get('/dogs', async (req, res) => {
+    
+}
 
 module.exports = router;
