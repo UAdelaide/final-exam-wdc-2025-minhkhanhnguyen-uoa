@@ -110,7 +110,7 @@ router.get('/walkrequests', async (req, res) => {
   try {
     const owner_id = req.session.user.user_id;
     const [rows] = await db.query(`
-      SELECT
+      SELECT * 
     `)
   }
 });
