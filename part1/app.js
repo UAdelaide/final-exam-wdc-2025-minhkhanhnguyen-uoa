@@ -21,7 +21,7 @@ let db;
 
 (async () => {
     try {
-        // Connect to mysql
+        // Connect to db
         db = await mysql.createConnection({
               host: 'localhost',
               user: 'root',
@@ -29,7 +29,7 @@ let db;
               database: 'DogWalkService'
         });
 
-        // Create tables if not exist
+        // Insert data if not exist
         await db.execute(`
 
         `);
