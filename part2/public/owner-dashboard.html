@@ -99,6 +99,8 @@
             } else {
               return alert('Failed to load dog');
             }
+          } catch (err) {
+            return res.status(500).
           }
         }
 
