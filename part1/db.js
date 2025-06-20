@@ -77,7 +77,7 @@ async function init_db() {
         }
 
         // for WalkRatings table (hard-coded)
-        const [walk_rating_rows] = await db.execute(``)
+        const [walk_rating_rows] = await db.execute(`SELECT COUNT(*) AS wlkrate_count FROM WalkRatings`)
 
         return db;
 
