@@ -56,7 +56,8 @@ async function init_db() {
                 ((SELECT dog_id FROM Dogs WHERE name = 'Bella' AND owner_id = (SELECT user_id FROM Users WHERE username = 'carol123')), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
                 ((SELECT dog_id FROM Dogs WHERE name = 'Riley' AND owner_id = (SELECT user_id FROM Users WHERE username = 'alice123')), '2025-06-20 19:00:00', 60, 'Adelaide Uni', 'completed'),
                 ((SELECT dog_id FROM Dogs WHERE name = 'Milo' AND owner_id = (SELECT user_id FROM Users WHERE username = 'alice123')), '2025-06-11 17:40:00', 40, 'Torrens River', 'open'),
-                ((SELECT dog_id FROM Dogs WHERE name = 'Riley' AND owner_id = (SELECT user_id FROM Users WHERE username = 'alice123')), '2024-06-13 10:13:00', 50, 'Melbourne airport', 'cancelled');
+                ((SELECT dog_id FROM Dogs WHERE name = 'Riley' AND owner_id = (SELECT user_id FROM Users WHERE username = 'alice123')), '2024-06-13 10:13:00', 50, 'Melbourne airport', 'cancelled')
+                ;
             `);
         }
 
