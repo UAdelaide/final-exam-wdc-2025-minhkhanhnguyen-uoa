@@ -29,8 +29,8 @@ router.post('/', async (req, res) => {
   try {
     const [result] = await db.query(`
       INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location)
-      VALUES (?, ?, ?, ?)
-    `, [dog_id, requested_time, duration_minutes, location]);
+      VALUES (, ?, ?, ?)
+    `, [dog_name, requested_time, duration_minutes, location]);
 
     res.status(201).json({ message: 'Walk request created', request_id: result.insertId });
   } catch (error) {
