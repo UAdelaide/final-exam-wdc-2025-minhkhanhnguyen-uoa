@@ -97,9 +97,8 @@
             if (res.ok) {
               dogs.value = await res.json();
             } else {
-              return alert('')
+              return alert('Failed to load dog');
             }
-
           }
         }
 
