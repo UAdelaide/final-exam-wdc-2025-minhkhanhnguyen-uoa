@@ -70,7 +70,7 @@ router.post('/logout', async (req, res) => {
     // If failed
     if (err) {
       console.log('Logout error: ', err);
-      res.
+      return res.status(500).json('')
     }
   });
 });
