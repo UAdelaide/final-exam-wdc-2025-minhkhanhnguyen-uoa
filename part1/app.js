@@ -36,9 +36,10 @@ let db;
         db = await mysql.createConnection({
             host: 'localhost',
             user: 'root',
-              password: '',
-              database: 'testdb'
-            });
+            password: '',
+            database: 'testdb'
+        });
+
     } catch (err) {
         console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
     }
