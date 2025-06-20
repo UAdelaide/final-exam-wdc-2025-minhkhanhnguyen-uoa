@@ -56,7 +56,7 @@
               throw new Error('Failed to get current user');
             }
 
-            
+            user.value = await res.json()
           }
         }
 
