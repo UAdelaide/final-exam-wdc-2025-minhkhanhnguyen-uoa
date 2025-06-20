@@ -63,7 +63,9 @@ async function init_db() {
 
         // for WalkApplications table (hard-coded)
         const [walk_application_rows] = await db.execute(`SELECT COUNT(*) AS wlkapp_count FROM WalkApplications`);
-        if (walk)
+        if (walk_application_rows[0].wlkapp_count === 0) {
+            
+        }
 
         return db;
 
