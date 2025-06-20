@@ -95,7 +95,6 @@ router.get('/dogs', async (req, res) => {
       SELECT name FROM Dogs WHERE owner_id = ?
     `, [owner_id]);
 
-    console.log('Fetch dog res: ', rows);
     return res.json(rows);
   } catch (err) {
     return res.status(500).json({ error: "Failed to fetch dogs" });
