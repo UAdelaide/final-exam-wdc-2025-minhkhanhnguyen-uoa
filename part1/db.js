@@ -71,10 +71,13 @@ async function init_db() {
                 (4, 4, 'rejected'),
                 (4, 2, 'accepted'),
                 (3, 5, 'pending'),
-    -> (3, 2, 'pending'),
-    -> (5, 5, 'accepted');
+                (3, 2, 'pending'),
+                (5, 5, 'accepted');
             `);
         }
+
+        // for WalkRatings table (hard-coded)
+        
 
         return db;
 
