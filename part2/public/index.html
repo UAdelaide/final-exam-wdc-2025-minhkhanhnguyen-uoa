@@ -58,9 +58,9 @@
             // Check for user role and redirect to corresponding dashboard
             if (res.ok) {
               const data = await res.json();
-              if (data.role === 'owner') {
+              if (data.user.role === 'owner') {
                 window.location.href = '/owner-dashboard.html';
-              } else if (data.role === 'walker') {
+              } else if (data.user.role === 'walker') {
                 window.location.href = '/walker-dashboard.html';
               } else {
                 return alert('User role is not defined');
