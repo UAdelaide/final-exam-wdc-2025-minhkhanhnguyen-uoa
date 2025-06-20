@@ -22,13 +22,17 @@
         <h2>Dog of the day</h2>
         <p>Click the button to show a random dog picture</p>
         <button type="button" @click="showPicture">Show picture</button>
-        <img :src="dog-img">
+        <img :src="dogimg">
     </div>
 
     <script>
         const { createApp } = Vue;
         createApp({
-            data() {}
+            data() {
+                return{
+                    dog-img
+                }
+            }
         }).mount('#app');
     </script>
 </body>
