@@ -44,7 +44,7 @@ let db;
         }
 
         // for Dogs table
-        const [dog_rows] = await db.execute
+        const [dog_rows] = await db.execute(`SELECT COUNT(*) AS dog_count FROM Dogs`)
 
 
 
