@@ -12,7 +12,9 @@ app.use(express.static(path.join(__dirname, '/public')));
 // Session setup
 app.use(express.urlencoded({ extended: true }));
 app.use(session({
-    secret: ''
+    secret: 'wdc_secret',
+    resave: false,
+    
 }));
 
 // Routes
