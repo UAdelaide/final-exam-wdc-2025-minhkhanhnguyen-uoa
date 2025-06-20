@@ -62,7 +62,7 @@ async function init_db() {
         }
 
         // for WalkApplications table (hard-coded)
-        
+        const []
 
         return db;
 
