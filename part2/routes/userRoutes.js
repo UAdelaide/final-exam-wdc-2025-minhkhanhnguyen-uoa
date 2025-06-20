@@ -118,6 +118,8 @@ router.get('/walkrequests', async (req, res) => {
     `, [owner_id]);
 
     return res.json(rows);
+  } catch {
+    return res.status(500).json({ error: })
   }
 });
 
