@@ -82,7 +82,8 @@ router.post('/logout', async (req, res) => {
 
 // GET dogs
 router.get('/dogs', async (req, res) => {
-  
+  // Check for valid user session
+  if (!req.session.)
 });
 
 module.exports = router;
