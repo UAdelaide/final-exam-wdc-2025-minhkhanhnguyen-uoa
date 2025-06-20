@@ -56,7 +56,8 @@ let db;
             `);
         }
 
-        // for 
+        // for WalkRequests table
+        const [walk]
 
 
 
