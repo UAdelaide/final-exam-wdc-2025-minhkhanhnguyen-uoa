@@ -67,7 +67,10 @@ router.post('/login', async (req, res) => {
 // POST logout
 router.post('/logout', async (req, res) => {
   req.session.destroy((err) => {
-    
+    // If failed
+    if (err) {
+      console.log('')
+    }
   });
 });
 
