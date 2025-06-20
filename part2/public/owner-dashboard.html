@@ -95,7 +95,9 @@
             });
 
             if (res.ok) {
-              dogs.value = res.json()
+              dogs.value = await res.json();
+            } else {
+              tho
             }
 
           }
