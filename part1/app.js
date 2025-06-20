@@ -31,7 +31,7 @@ let db;
 
         // Insert data if not exist
         // for Users table
-        const [user_rows] = await db.execute(`SELECT COUNT(*) FROM Users`)
+        const [user_rows] = await db.execute(`SELECT COUNT(*) AS user_count FROM Users`);
 
 
 
