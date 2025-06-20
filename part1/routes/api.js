@@ -2,16 +2,7 @@ var express = require('express');
 var router = express.Router();
 var db = require('../db.js');
 
-module.exports = (db) => {
-    router.get('/dogs', async (req, res) => {
-        try {
-            const [dogs] = await db.execute(`SELECT * FROM Dogs`);
-            res.json(dogs);
-        } catch (err) {
-            res.status(500).json({ error: 'Failed to fetch dogs' });
-        }
-    });
+router.get('/dogs', async (req, res) => {
 
-    return router;
-};
+})
 
