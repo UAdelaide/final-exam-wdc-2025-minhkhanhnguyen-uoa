@@ -31,6 +31,7 @@ router.post('/', async (req, res) => {
 
     res.status(201).json({ message: 'Walk request created', request_id: result.insertId });
   } catch (error) {
+    console.error('Walk insert error:', error);
     res.status(500).json({ error: 'Failed to create walk request' });
   }
 });
