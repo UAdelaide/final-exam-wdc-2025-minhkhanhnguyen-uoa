@@ -65,7 +65,8 @@
                 return alert('User role is not defined');
               }
             } else {
-              coonst
+              const error = await res.json();
+              return alert('Login failed')
             }
 
           }
