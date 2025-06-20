@@ -119,9 +119,8 @@ router.get('/walkrequests', async (req, res) => {
 
     return res.json(rows);
   } catch (err) {
-    console.error('SQL Error:', error);
-
-    return res.status(500).json({ error: 'Failed to fetch walk requests'});
+    console.error('SQL Error:', err);
+    return res.status(500).json({ err: 'Failed to fetch walk requests' });
   }
 });
 
