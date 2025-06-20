@@ -4,7 +4,7 @@ var mysql = require('mysql2/promise');
 // Insert records if not exists (for testing)
 let db;
 
-async () => {
+(async () => {
     try {
         // Connect to db
         db = await mysql.createConnection({
@@ -56,4 +56,4 @@ async () => {
     } catch (err) {
         console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
     }
-}
+})();
