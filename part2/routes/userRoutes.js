@@ -119,7 +119,7 @@ router.get('/walkrequests', async (req, res) => {
 
     return res.json(rows);
   } catch {
-    return res.status(500).json({ error: })
+    return res.status(500).json({ error: 'Failed to fetch walk requests'});
   }
 });
 
