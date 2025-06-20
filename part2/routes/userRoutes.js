@@ -80,7 +80,7 @@ router.post('/logout', async (req, res) => {
   });
 });
 
-// GET dogs
+// GET dogs of a specific owner
 router.get('/dogs', async (req, res) => {
   // Check for valid user session
   if (!req.session.user) {
@@ -101,5 +101,6 @@ router.get('/dogs', async (req, res) => {
 });
 
 // GET all the dogs
+
 
 module.exports = router;
