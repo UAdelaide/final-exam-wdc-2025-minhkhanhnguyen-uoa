@@ -39,7 +39,9 @@ let db;
         });
 
         // Create tables if not exist
-        await d
+        await db.execute(`
+
+        `);
 
     } catch (err) {
         console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
