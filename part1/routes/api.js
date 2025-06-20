@@ -44,6 +44,7 @@ router.get('/walkers/summary', async (req, res) => {
             WHERE u.role = 'walker'
             GROUP BY u.user_id;
         `);
+        res.json(walkers);
     } catch (err) {
         console.log('Error in api/walkers/summary: ', err);
         res.status(500).json({ error: 'Failed to fetch summary of walkers' });
