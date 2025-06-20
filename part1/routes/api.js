@@ -34,7 +34,8 @@ router.get('/walkers/summary', async (req, res) => {
     try {
         const db = await init_db();
         const [walkers] = await db.execute(`
-            SELECT u.username AS walker_username, (SELECT COUNT(*) FROM WalkRatings WHERE walker_id = )
+            SELECT u.username AS walker_username,
+            (SELECT COUNT(*) FROM WalkRatings WHERE walker_id = )
         `);
     } catch (err) {
         console.log('Error in api/walkers/summary: ', err);
