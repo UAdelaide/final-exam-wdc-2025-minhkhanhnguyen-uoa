@@ -61,7 +61,8 @@ async function init_db() {
             `);
         }
 
-        // for WalkApplication
+        // for WalkApplications table (hard-coded)
+        
 
         return db;
 
