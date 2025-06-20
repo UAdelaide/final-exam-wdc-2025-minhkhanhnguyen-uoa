@@ -118,7 +118,8 @@
         }
 
         // Logout button
-        async logout() {
+        methods: {
+          async logout() {
           try {
             const res = await fetch('/api/users/logout', {
               method: 'POST',
