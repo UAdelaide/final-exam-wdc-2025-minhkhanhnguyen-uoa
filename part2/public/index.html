@@ -56,7 +56,10 @@
             });
 
             if (res.ok) {
-              const data = await res.json
+              const data = await res.json();
+              if (data.role === 'owner') {
+                window.location.href = 
+              }
             }
 
           }
