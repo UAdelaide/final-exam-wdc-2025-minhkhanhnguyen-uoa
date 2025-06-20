@@ -22,7 +22,7 @@
         <h2>Dog of the day</h2>
         <p>Click the button to show a random dog picture</p>
         <button type="button" @click="showPicture">Show picture</button>
-        <img :src="dogimg">
+        <img :src="dogImg">
     </div>
 
     <script>
@@ -30,7 +30,7 @@
         createApp({
             data() {
                 return{
-                    dog-img
+                    dogImg: '',
                 }
             }
         }).mount('#app');
