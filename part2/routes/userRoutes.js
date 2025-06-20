@@ -102,18 +102,10 @@ router.get('/dogs', async (req, res) => {
 
 // GET all the dogs
 router.get('/dogs', async (req, res) => {
-  // Check for valid user session
-  if (!req.session.user) {
-    return res.status(401).json({ error: "Not logged in" });
-  }
-
-  // Query dog from db
   try {
-    const owner_id = req.session.user.user_id;
     const [rows] = await db.query(`
       SELECT * FROM Dogs;
     `);
-
     return res.json(rows);
   } catch (err) {
     return res.status(500).json({ error: "Failed to fetch dogs" });
