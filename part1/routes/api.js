@@ -8,6 +8,7 @@ router.get('/dogs', async (req, res) => {
         const [dogs] = await db.execute(`SELECT * FROM Dogs`);
         res.json(dogs);
     } catch (err) {
+        console.error('Error in /api/dogs:', err);
         res.status(500).json({ error: 'Failed to fetch dogs' });
     }
 });
