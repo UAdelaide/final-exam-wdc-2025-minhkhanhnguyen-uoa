@@ -100,4 +100,6 @@ router.get('/dogs', async (req, res) => {
   }
 });
 
+// GET all the dogs
+
 module.exports = router;
