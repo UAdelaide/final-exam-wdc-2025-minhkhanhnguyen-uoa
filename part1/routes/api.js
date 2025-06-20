@@ -34,11 +34,11 @@ router.get('/walkers/summary', async (req, res) => {
     try {
         const db = await init_db();
         const [walkers] = await db.execute(`
-
+            
         `);
     } catch (err) {
         console.log('Error in api/walkers/summary: ', err);
-        res.status(500).json({ error: 'Failed to fetch summary of '})
+        res.status(500).json({ error: 'Failed to fetch summary of walkers' });
     }
 });
 
