@@ -108,7 +108,7 @@ router.get('/walkrequests', async (req, res) => {
   }
 
   try {
-    const on
+    const owner_id = req.session.user.user_id;
   }
 });
 
