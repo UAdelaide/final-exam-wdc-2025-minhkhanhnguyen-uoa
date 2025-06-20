@@ -37,7 +37,8 @@ router.get('/walkers/summary', async (req, res) => {
 
         `);
     } catch (err) {
-        
+        console.log('Error in api/walkers/summary: ', err);
+        res.status
     }
 });
 
