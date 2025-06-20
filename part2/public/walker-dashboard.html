@@ -59,7 +59,7 @@
             }
 
             user.value = await res.json();
-            console.log('get current user: ')
+            console.log('get current user: ', user.value.user_id);
           } catch (err) {
             error.value = err.message;
           }
