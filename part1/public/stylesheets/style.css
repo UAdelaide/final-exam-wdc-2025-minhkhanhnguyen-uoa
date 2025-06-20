@@ -16,5 +16,7 @@ img {
 button {
   font-size: 10px;
   position: fixed;
-  bottom: 20px
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 15px;
 }
