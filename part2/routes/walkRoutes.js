@@ -22,8 +22,8 @@ router.get('/', async (req, res) => {
 // POST a new walk request (from owner)
 router.post('/', async (req, res) => {
   const { dog_id, requested_time, duration_minutes, location } = req.body;
-  if (!dog_name || isNaN(dog_name)) {
-    return res.status(400).json({ error: 'Invalid dog_name' });
+  if (!dog_id || isNaN(dog_id)) {
+    return res.status(400).json({ error: 'Invalid dog_id' });
   }
 
   try {
