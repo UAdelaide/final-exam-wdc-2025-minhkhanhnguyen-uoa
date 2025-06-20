@@ -30,9 +30,10 @@ let db;
         });
 
         // Insert data if not exist
-        await db.execute(`
+        // for Users table
+        
 
-        `);
+
 
     } catch (err) {
         console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
