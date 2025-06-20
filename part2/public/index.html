@@ -55,6 +55,7 @@
               })
             });
 
+            // Check for user role and redirect to 
             if (res.ok) {
               const data = await res.json();
               if (data.role === 'owner') {
