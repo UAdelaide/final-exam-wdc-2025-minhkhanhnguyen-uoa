@@ -60,7 +60,7 @@
 
             user.value = await res.json();
           } catch (err) {
-            
+            error.value = err.message;
           }
         }
 
