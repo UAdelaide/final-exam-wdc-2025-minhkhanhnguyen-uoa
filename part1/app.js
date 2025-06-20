@@ -31,7 +31,7 @@ let db;
 
         // Insert data if not exist
         // for Users table
-        
+        const [user_rows] = 
 
 
 
