@@ -36,7 +36,7 @@
             methods: {
                 async showPicture() {
                     const res = await fetch('https://dog.ceo/api/breeds/image/random');
-                    const data = 
+                    this.dogImg = await res.json();
                 }
             },
 
