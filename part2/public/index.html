@@ -73,6 +73,7 @@
             for (let dog of all_dogs) {
               try {
                 const imgRes = await fetch('https://dog.ceo/api/breeds/image/random');
+                const data = await imgRes.json();
               }
             }
 
