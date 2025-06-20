@@ -53,13 +53,12 @@
             const res = await fetch('/api/users/me', {
               credentials: 'include'
             });
-            console.log('raw response ok?', res.ok);
+
             if (!res.ok) {
               throw new Error('Failed to get current user');
             }
 
             user.value = await res.json();
-            console.log('get current user: ', user.value.user_id);
           } catch (err) {
             error.value = err.message;
           }
