@@ -4,7 +4,7 @@ const mysql = require('mysql2/promise');
 // Insert records if not exists (for testing)
 let db = null;
 
-async function init_db () => {
+async function init_db() {
     try {
         // Connect to db
         db = await mysql.createConnection({
