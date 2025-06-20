@@ -88,7 +88,8 @@ router.get('/dogs', async (req, res) => {
   }
 
   // Query dog name from db
-  const owner_id = req.session.user.
+  const owner_id = req.session.user.user_id;
+  const [rows] = 
 });
 
 module.exports = router;
