@@ -50,13 +50,15 @@
         // Get current user
         async function getCurrentUser() {
           try {
-            const res = await fetch('/api/users/me');
+            const res = await fetch('/api/users/me', {
+              
+            });
 
             if (!res.ok) {
               throw new Error('Failed to get current user');
             }
 
-            user.value = await res.json()
+            user.value = await res.json();
           }
         }
 
