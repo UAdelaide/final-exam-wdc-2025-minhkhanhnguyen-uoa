@@ -38,7 +38,8 @@ let db;
             database: 'DogWalkService'
         });
 
-        // 
+        // Create tables if not exist
+        await d
 
     } catch (err) {
         console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
