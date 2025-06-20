@@ -43,7 +43,7 @@
         async login() {
           try {
             // Send login info to /login route
-            const res = await fetch('/login', {
+            const res = await fetch('/api/users/login', {
               method: 'POST',
               header: {
                 'Content-Type': 'application/json'
