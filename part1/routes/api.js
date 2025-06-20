@@ -4,6 +4,7 @@ var { init_db } = require('../db.js');
 
 router.get('/dogs', async (req, res) => {
     try {
+        const db = await init_db;
         const [dogs] = await db.execute(`SELECT * FROM Dogs`);
         res.json(dogs);
     } catch (err) {
