@@ -2,8 +2,6 @@ var express = require('express');
 var router = express.Router();
 var { init_db } = require('../db.js');
 
-
-
 router.get('/dogs', async (req, res) => {
     try {
         const db = await init_db();
