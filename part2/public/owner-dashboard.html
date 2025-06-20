@@ -114,6 +114,7 @@
 
         async function submitWalkRequest() {
           try {
+            console.log('Submitting:', form.value);
             const res = await fetch('/api/walks', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
