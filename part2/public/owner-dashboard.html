@@ -153,8 +153,28 @@
           submitWalkRequest
         };
       },
-      
+      methods: {
+        async logout() {
+            try {
+              const res = await fetch('/api/users/logout', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                credentials: 'include',
+              });
 
+              // If logout successful
+              if (res.ok) {
+                window.location.href = '/index.html';
+              } else {
+                return alert('Failed to log out!');
+              }
+            } catch (err) {
+              alert('Logout error!');
+            }
+          }
+      }
     }).mount('#app');
   </script>
 
