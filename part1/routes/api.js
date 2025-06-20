@@ -17,7 +17,7 @@ router.get('/walkrequests/open', async (req, res) => {
     try {
         const db = await init_db();
         const [open_wlkreq] = db.execute(`
-            SELECT 
+            SELECT r.request_id, 
         `);
         res.json(open_wlkreq);
     } catch (err) {
