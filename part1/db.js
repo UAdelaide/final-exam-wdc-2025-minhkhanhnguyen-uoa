@@ -43,7 +43,7 @@ let db;
 
         // for WalkRequests table
         const [walk_request_rows] = await db.execute(`SELECT COUNT(*) AS wlkreq_count FROM WalkRequests`);
-        if (walk_request_rows[0].wlkreq === 0) {
+        if (walk_request_rows[0].wlkreq_count === 0) {
             await db.execute(`
                 INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, status) VALUES
                 ((SELECT dog_id FROM Dogs WHERE name = 'Max' AND owner_id = (SELECT user_id FROM Users WHERE username = 'alice123')), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
