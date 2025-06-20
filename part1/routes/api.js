@@ -14,6 +14,7 @@ router.get('/dogs', async (req, res) => {
     }
 });
 
+// api/walkrequests/open
 router.get('/walkrequests/open', async (req, res) => {
     try {
         const db = await init_db();
@@ -31,6 +32,7 @@ router.get('/walkrequests/open', async (req, res) => {
     }
 });
 
+// api/walkers/summary
 router.get('/walkers/summary', async (req, res) => {
     try {
         const db = await init_db();
