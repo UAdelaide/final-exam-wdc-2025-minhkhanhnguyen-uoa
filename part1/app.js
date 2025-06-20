@@ -19,7 +19,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Insert records if not exists (for testing)
 let db;
 
+(async () => {
 
+})
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
