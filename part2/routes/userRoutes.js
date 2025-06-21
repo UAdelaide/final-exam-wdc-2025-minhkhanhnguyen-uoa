@@ -100,29 +100,6 @@ router.get('/dogs', async (req, res) => {
   }
 });
 
-// Load walk request from the logged in owners
-router.get('/walkrequests', async (req, res) => {
-  // Check for valid user session
-  if (!req.session.user) {
-    return res.status(401).json({ error: "Not logged in" });
-  }
-
-  try {
-    const owner_id = req.session.user.user_id;
-    const [rows] = await db.query(`
-      SELECT wr.*, d.name AS dog_name, d.size, u.username AS owner_name
-      FROM WalkRequests wr
-      JOIN Dogs d ON wr.dog_id = d.dog_id
-      JOIN Users u ON d.owner_id = u.user_id
-      WHERE wr.status = 'open' AND u.user_id = ?
-    `, [owner_id]);
-
-    return res.json(rows);
-  } catch (err) {
-    console.error('SQL Error:', err);
-    return res.status(500).json({ err: 'Failed to fetch walk requests' });
-  }
-});
 
 // GET all the dogs
 router.get('/allDogs', async (req, res) => {
